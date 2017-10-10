@@ -1,12 +1,19 @@
-<header class="site-header" role="banner">
+<header>
 
+  <nav class="nav">
+    <a class="nav-link active" href="#">Active</a>
+    <a class="nav-link" href="#">Link</a>
+    <a class="nav-link" href="#">Link</a>
+    <a class="nav-link disabled" href="#">Disabled</a>
+  </nav>
+<!--
   <div class="wrapper">
     {% assign default_paths = site.pages | map: "path" %}
     {% assign page_paths = site.header_pages | default: default_paths %}
     <a class="site-title" href="{{ "/" | relative_url }}">{{ site.title | escape }}</a>
-  
+
     {% if page_paths %}
-      <nav class="site-nav">
+      <nav class="navbar navbar-expand-md fixed-top">
         <input type="checkbox" id="nav-trigger" class="nav-trigger" />
         <label for="nav-trigger">
           <span class="menu-icon">
@@ -29,4 +36,5 @@
       </nav>
     {% endif %}
   </div>
+-->
 </header>

@@ -1,0 +1,16 @@
+.jumbotron {
+  background-image: url("/assets/images/textura-huertito-gris.svg");
+  background-size: cover;
+}
+
+.jumbotron .logo {
+  background-image: url("/assets/images/huertito-logo-web.svg");
+  background-repeat: no-repeat;
+  margin-left: auto;
+  margin-right: auto;
+  width: 8em
+}
+
+.jumbotron h1 {
+  visibility: hidden;
+}
