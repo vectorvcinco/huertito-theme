@@ -1,16 +1,24 @@
-.jumbotron {
-  background-image: url("/assets/images/textura-huertito-gris.svg");
-  background-size: cover;
-}
-
-.jumbotron .logo {
-  background-image: url("/assets/images/huertito-logo-web.svg");
+.logo {
+  background-image: url("/assets/images/huertito-logo-animado.svg");
   background-repeat: no-repeat;
-  margin-left: auto;
-  margin-right: auto;
-  width: 8em
+  background-position: center;
+  background-size: auto 120%;
+  height: 100px;
+  width: 120%;
 }
 
-.jumbotron h1 {
+.logo h1 {
   visibility: hidden;
+}
+
+.banner {
+  background-image: url("/assets/images/jumbotron.jpg");
+  padding: 10% 10% 10% 10%;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.splash {
+  padding: 0;
 }
