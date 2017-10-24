@@ -1,24 +1,51 @@
-.logo {
+.banner {
+  background-image: url("/assets/images/jumbotron.jpg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: 10%;
+  height: 150px;
+}
+
+.welcome {
+  margin-left: 50%;
+  padding-top: 5%;
+  position: relative;
+}
+
+.welcome .logo {
   background-image: url("/assets/images/huertito-logo-animado.svg");
   background-repeat: no-repeat;
   background-position: center;
-  background-size: auto 120%;
-  height: 100px;
-  width: 120%;
+  height: 54px;
 }
 
-.logo h1 {
+.welcome button {
+  margin: 0;
+  position: absolute;
+  top: 145%;
+  left: 50%;
+  margin-right: -50%;
+  transform: translate(-50%, -50%);
+}
+.welcome .logo h1 {
   visibility: hidden;
 }
 
-.banner {
-  background-image: url("/assets/images/jumbotron.jpg");
-  padding: 10% 10% 10% 10%;
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: center;
-}
+@media screen and (min-width: 737px) {
+    .banner {
+      height: 400px;
+    }
+    .welcome .logo {
+      height: 100px;
+    }
 
-.splash {
-  padding: 0;
+    .welcome {
+      margin-left: 60%;
+      padding-top: 10%;
+    }
+
+    .welcome button {
+      top: 125%;
+    }
+
 }
