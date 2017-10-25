@@ -1,9 +1,19 @@
+header {
+  height: 170px;
+}
+
+.splash {
+  height: 100%
+}
+
 .banner {
   background-image: url("/assets/images/jumbotron.jpg");
   background-size: contain;
   background-repeat: no-repeat;
   background-position: 10%;
-  height: 150px;
+  background-attachment: fixed;
+
+  height: 100%;
 }
 
 .welcome {
@@ -16,6 +26,7 @@
   background-image: url("/assets/images/huertito-logo-animado.svg");
   background-repeat: no-repeat;
   background-position: center;
+
   height: 54px;
 }
 
@@ -32,9 +43,11 @@
 }
 
 @media screen and (min-width: 737px) {
-    .banner {
-      height: 400px;
+
+    header {
+      height: 95vh;
     }
+
     .welcome .logo {
       height: 100px;
     }
