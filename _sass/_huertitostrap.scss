@@ -12,7 +12,7 @@ main {
 
 .feature {
   padding-top: 15px;
-  padding-bottom: 15px;
+  padding-bottom: 50px;
 }
 
 .splash {
@@ -21,8 +21,30 @@ main {
   z-index: -1;
 }
 
+.section2 {
+  z-index: -1;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 80vh;
+  background-image: url("/assets/images/cites_skyline.svg");
+  background-size: auto 100%;
+}
+
+.section2 span {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height:100%;
+}
+
+.section2 span h1 {
+  background-color: rgba(255, 255, 255, 0.7);
+  padding: 10px;
+}
+
 .banner {
-  background-image: url("/assets/images/jumbotron.jpg");
+  background-image: url("/assets/images/jumbotron.svg");
   background-size: contain;
   background-repeat: no-repeat;
   background-position: 10%;
