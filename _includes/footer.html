@@ -1,14 +1,15 @@
-<footer class="footer container-fluid">
+<footer class="footer container">
 
   <div class="row">
-    <div class="col">
-      <h2 class="footer-heading">{{ site.title | escape }}</h2>
+    <div class="col-sm-8">
+      <h2>{{ site.title | escape }}</h2>
       <p>{{ site.description | escape }}</p>
+      <p><small>{{ site.love }}</small></p>
     </div>
 
     <div class="col">
       <h3>Contacto:</h3>
-      <ul>
+      <ul class="contactlist">
         <li>
         {% if site.author %}
           {{ site.author | escape }}
