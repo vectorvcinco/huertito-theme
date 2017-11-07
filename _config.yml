@@ -30,3 +30,4 @@ exclude:
 
 collections:
   - features
+  - pricing

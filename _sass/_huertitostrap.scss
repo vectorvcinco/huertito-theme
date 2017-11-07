@@ -89,6 +89,34 @@ main {
   visibility: hidden;
 }
 
+.huertitosingle, .huertitodouble {
+  border-right: 1px dashed #333;
+}
+
+.planprice h1, .planprice h3 {
+  width: 100%;
+}
+
+.plandescription {
+  padding: 5px 30px 5px 30px;
+}
+
+.huertitosingle, .huertitodouble, .huertitotriple {
+  padding: 30px 0px 30px 0px;
+}
+
+.huertitosingle {
+  background-image: url("/assets/images/spiration-light.png");
+}
+
+.huertitodouble {
+  background-image: url("/assets/images/pattern_congruent_pentagon.png");
+}
+
+.huertitotriple {
+  background-image: url("/assets/images/pattern_sayagata-400px.png");
+}
+
 @media screen and (min-width: 737px) {
 
     header {
