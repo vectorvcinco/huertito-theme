@@ -1,0 +1,27 @@
+<section class="pitch mainsection">
+
+  {% for feature in site.features %}
+  {% capture thecycle %}{% cycle 'odd', 'even' %}{% endcapture %}
+  <div class="row feature">
+
+    {% if thecycle == 'odd' %}
+    <div class="col text-center">
+      <img src="{{ feature.image }}" class="img-fluid" alt="Responsive image">
+    </div>
+    {% endif %}
+
+    <div class="col">
+      <h3>{{feature.title  }}</h3>
+      <p>{{ feature }}</p>
+    </div>
+
+    {% if thecycle == 'even' %}
+    <div class="col text-center">
+      <img src="{{ feature.image }}" class="img-fluid" alt="Responsive image">
+    </div>
+    {% endif %}
+
+  </div>
+  {% endfor %}
+
+</section>
