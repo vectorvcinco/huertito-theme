@@ -1,7 +1,3 @@
-header {
-  height: 170px;
-}
-
 main, footer {
   background-color: white;
 }
@@ -24,10 +20,39 @@ main {
   padding-bottom: 50px;
 }
 
+.welcome {
+  z-index: 1;
+}
+
 .splash {
   height: 100%;
   position: fixed;
   z-index: -1;
+}
+
+.logo {
+  background-image: url("/assets/images/huertito-logo-animado.svg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.logo h1 {
+  visibility: hidden;
+}
+
+header {
+  height: 95vh;
+}
+
+.banner {
+  background-image: url("/assets/images/jumbotron.svg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: 10%;
+//  background-attachment: fixed;
+
+  height: 100%;
 }
 
 .parallax {
@@ -41,44 +66,6 @@ main {
   border-radius: 10px;
 }
 
-
-.banner {
-  background-image: url("/assets/images/jumbotron.svg");
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: 10%;
-//  background-attachment: fixed;
-
-  height: 100%;
-}
-
-.welcome {
-  margin-left: 50%;
-  padding-top: 5%;
-  position: relative;
-//  position: fixed;
-}
-
-.welcome .logo {
-  background-image: url("/assets/images/huertito-logo-animado.svg");
-  background-repeat: no-repeat;
-  background-position: center;
-
-  height: 54px;
-}
-
-.welcome button {
-  margin: 0;
-  position: absolute;
-  top: 145%;
-  left: 50%;
-  margin-right: -50%;
-  transform: translate(-50%, -50%);
-}
-.welcome .logo h1 {
-  visibility: hidden;
-}
-
 .huertitosingle {
   background-image: url("/assets/images/spiration-light.png");
 }
@@ -89,25 +76,4 @@ main {
 
 .huertitotriple {
   background-image: url("/assets/images/pattern_sayagata-400px.png");
-}
-
-@media screen and (min-width: 737px) {
-
-    header {
-      height: 95vh;
-    }
-
-    .welcome .logo {
-      height: 100px;
-    }
-
-    .welcome {
-      margin-left: 60%;
-      padding-top: 10%;
-    }
-
-    .welcome button {
-      top: 125%;
-    }
-
 }
