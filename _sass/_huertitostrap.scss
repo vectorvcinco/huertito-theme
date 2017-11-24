@@ -10,7 +10,7 @@ main {
   padding-top: 30px;
 }
 
-.mainsection {
+.inside, .pitch, .princingplans, .otherfeatures {
   padding: 2em 4em 2em 4em;
 }
 
@@ -30,27 +30,16 @@ main {
   z-index: -1;
 }
 
-.section2 {
+.parallax {
   z-index: -1;
   background-attachment: fixed;
-  background-repeat: no-repeat;
   background-position: center;
-  height: 80vh;
-  background-image: url("/assets/images/cites_skyline.svg");
+  height: 3vh;
+  background-image: url("/assets/images/textura-huertito-gris.svg");
   background-size: auto 100%;
+  margin-bottom: 4em;
 }
 
-.section2 span {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height:100%;
-}
-
-.section2 span h1 {
-  background-color: rgba(255, 255, 255, 0.7);
-  padding: 10px;
-}
 
 .banner {
   background-image: url("/assets/images/jumbotron.svg");
@@ -87,11 +76,6 @@ main {
 }
 .welcome .logo h1 {
   visibility: hidden;
-}
-
-.princingplans, .otherfeatures {
-  padding-top: 1em;
-  padding-bottom: 2em;
 }
 
 .huertitosingle {
