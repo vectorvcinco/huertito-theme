@@ -31,6 +31,7 @@ exclude:
 collections:
   - features
   - pricing
+  - otherfeatures
 
 jekyll_analytics:
   GoogleAnalytics:          # Add, if you want to track with Google Analytics
