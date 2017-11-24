@@ -7,4 +7,6 @@ gem 'jquery-rails'
 
 group :jekyll_plugins do
     gem 'jekyll-livereload'
+    gem 'jekyll-analytics'
+    gem 'jekyll-money'
 end

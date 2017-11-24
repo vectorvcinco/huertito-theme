@@ -31,3 +31,7 @@ exclude:
 collections:
   - features
   - pricing
+
+jekyll_analytics:
+  GoogleAnalytics:          # Add, if you want to track with Google Analytics
+    id: UA-91857415-2          # Required - replace with your tracking id
