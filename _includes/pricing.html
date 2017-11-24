@@ -11,7 +11,7 @@
     <div class="col {{ plan.class }}">
 
       <div  class="row planprice">
-        <h1 class="text-center">{{ plan.price }}</h1>
+        <h1 class="text-center">{{ plan.price | money ":MXN" }}</h1>
         <h3 class="text-center">{{ plan.planname }}</h3>
       </div>
 
