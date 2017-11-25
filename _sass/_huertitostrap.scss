@@ -20,16 +20,6 @@ main {
   padding-bottom: 50px;
 }
 
-.welcome {
-  z-index: 1;
-}
-
-.splash {
-  height: 100%;
-  position: fixed;
-  z-index: -1;
-}
-
 .logo {
   background-image: url("/assets/images/huertito-logo-animado.svg");
   background-position: center;
@@ -50,8 +40,12 @@ header {
   background-size: contain;
   background-repeat: no-repeat;
   background-position: 10%;
-//  background-attachment: fixed;
+  height: 100%;
+  width: 100%;
+  position: fixed;
+}
 
+.splash {
   height: 100%;
 }
 
