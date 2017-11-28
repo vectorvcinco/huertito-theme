@@ -1,14 +1,9 @@
 main, footer {
-  background-color: white;
+  background-color: $white;
 }
 
 .homesection {
   padding: $spacer*2 $spacer*4 $spacer*2 $spacer*4;
-}
-
-.contactlist {
-  list-style: none;
-  padding: 0 0 0 $spacer;
 }
 
 .logo {
@@ -47,15 +42,21 @@ header {
 }
 
 .pricingplans {
+  $pricingbackgrounds: (
+  single: url("/assets/images/spiration-light.png"),
+  double: url("/assets/images/pattern_congruent_pentagon.png"),
+  triple: url("/assets/images/pattern_sayagata-400px.png")
+  );
+
   .huertitosingle {
-    background-image: url("/assets/images/spiration-light.png");
+    background-image: map-get($pricingbackgrounds, single);
   }
 
   .huertitodouble {
-    background-image: url("/assets/images/pattern_congruent_pentagon.png");
+    background-image: map-get($pricingbackgrounds, double);
   }
 
   .huertitotriple {
-    background-image: url("/assets/images/pattern_sayagata-400px.png");
+    background-image: map-get($pricingbackgrounds, triple);
   }
 }
