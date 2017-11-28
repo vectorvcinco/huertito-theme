@@ -6,7 +6,7 @@ main {
   padding-top: 30px;
 }
 
-.inside, .pitch, .princingplans, .otherfeatures {
+.homesection {
   padding: 2em 4em 2em 4em;
 }
 
@@ -15,20 +15,14 @@ main {
   padding: 0 0 0 1em;
 }
 
-.feature {
-  padding-top: 15px;
-  padding-bottom: 50px;
-}
-
 .logo {
   background-image: url("/assets/images/huertito-logo-animado.svg");
   background-position: center;
   background-repeat: no-repeat;
   background-size: contain;
-}
-
-.logo h1 {
-  visibility: hidden;
+  h1 {
+    visibility: hidden;
+  }
 }
 
 header {

@@ -1,14 +1,13 @@
-<section class="otherfeatures">
-
-<div class="card-deck">
-  {% for feature in site.otherfeatures %}
-  <div class="card border-0">
-    <img class="card-img-top mx-auto rounded-circle" src="{{ feature.image }}" style="width: 60%"  alt="{{ feature.title }}">
-    <div class="card-body">
-      <h4 class="card-title text-center">{{ feature.title }}</h4>
-      <p class="card-text text-center text-muted">{{ feature }}</p>
+<section class="homesection">
+  <div class="card-deck">
+    {% for feature in site.otherfeatures %}
+    <div class="card border-0">
+      <img class="card-img-top mx-auto rounded-circle" src="{{ feature.image }}" style="width: 60%"  alt="{{ feature.title }}">
+      <div class="card-body">
+        <h4 class="card-title text-center">{{ feature.title }}</h4>
+        <p class="card-text text-center text-muted">{{ feature }}</p>
+      </div>
     </div>
+    {% endfor %}
   </div>
-  {% endfor %}
-</div>
 </section>
