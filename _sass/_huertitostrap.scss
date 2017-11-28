@@ -2,17 +2,13 @@ main, footer {
   background-color: white;
 }
 
-main {
-  padding-top: 30px;
-}
-
 .homesection {
-  padding: 2em 4em 2em 4em;
+  padding: $spacer*2 $spacer*4 $spacer*2 $spacer*4;
 }
 
 .contactlist {
   list-style: none;
-  padding: 0 0 0 1em;
+  padding: 0 0 0 $spacer;
 }
 
 .logo {
@@ -27,41 +23,39 @@ main {
 
 header {
   height: 95vh;
-}
-
-.banner {
-  background-image: url("/assets/images/jumbotron.svg");
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: 10%;
-  height: 100%;
-  width: 100%;
-  position: fixed;
-}
-
-.splash {
-  height: 100%;
+  .banner {
+    background-image: url("/assets/images/jumbotron.svg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: 10%;
+    height: 100%;
+    width: 100%;
+    position: fixed;
+  }
 }
 
 .parallax {
   z-index: -1;
   background-attachment: fixed;
   background-position: center;
-  height: 2vh;
+  height: $spacer;
   background-image: url("/assets/images/textura-huertito-verde.svg");
   background-size: auto 100%;
-  margin-bottom: 4em;
+  margin-bottom: $spacer*4;
+  margin-top: $spacer*4;
   border-radius: 10px;
 }
 
-.huertitosingle {
-  background-image: url("/assets/images/spiration-light.png");
-}
+.pricingplans {
+  .huertitosingle {
+    background-image: url("/assets/images/spiration-light.png");
+  }
 
-.huertitodouble {
-  background-image: url("/assets/images/pattern_congruent_pentagon.png");
-}
+  .huertitodouble {
+    background-image: url("/assets/images/pattern_congruent_pentagon.png");
+  }
 
-.huertitotriple {
-  background-image: url("/assets/images/pattern_sayagata-400px.png");
+  .huertitotriple {
+    background-image: url("/assets/images/pattern_sayagata-400px.png");
+  }
 }
