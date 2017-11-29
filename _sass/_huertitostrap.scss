@@ -1,4 +1,5 @@
 @import "huertitovariables";
+// Las texturas e imagenes se importan en assets/main.scss
 
 main, footer {
   background-color: color(white);
@@ -20,7 +21,7 @@ header {
     position: fixed;
   }
 
-  & .logo {
+  .logo {
     background-image: $logo-animado;
     background-position: center;
     background-repeat: no-repeat;
