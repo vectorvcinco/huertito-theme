@@ -1,5 +1,7 @@
+@import "huertitovariables";
+
 main, footer {
-  background-color: $white;
+  background-color: color(white);
 }
 
 .homesection {
