@@ -1,4 +1,4 @@
-<section class="homesection px-1">
+<section class="homesection bg-danger">
 
   <div class="row justify-content-center">
     <div class="col">
@@ -6,9 +6,9 @@
     </div>
   </div>
 
-  <div class="card-deck pricingplans">
+  <div class="card-deck">
     {% for plan in site.pricing %}
-    <div class="card {{ plan.class }}">
+    <div class="card pricingplan {{ plan.class }}">
 
       <div class="card-body">
         <h2 class="card-title text-center">{{ plan.price | money ":MXN" }}</h2>

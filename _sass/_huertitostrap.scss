@@ -8,20 +8,10 @@ main, footer {
   padding: $spacer*2 $spacer*4 $spacer*2 $spacer*4;
 }
 
-.logo {
-  background-image: url("/assets/images/huertito-logo-animado.svg");
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: contain;
-  h1 {
-    visibility: hidden;
-  }
-}
-
 header {
   height: 95vh;
   .banner {
-    background-image: url("/assets/images/jumbotron.svg");
+    background-image: $jumbotron;
     background-size: contain;
     background-repeat: no-repeat;
     background-position: 10%;
@@ -29,36 +19,43 @@ header {
     width: 100%;
     position: fixed;
   }
+
+  & .logo {
+    background-image: $logo-animado;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    h1 {
+      visibility: hidden;
+    }
+  }
 }
 
 .parallax {
   z-index: -1;
   background-attachment: fixed;
   background-position: center;
-  height: $spacer;
-  background-image: url("/assets/images/textura-huertito-verde.svg");
+  height: $spacer*8;
   background-size: auto 100%;
-  margin-bottom: $spacer*4;
-  margin-top: $spacer*4;
-  border-radius: 10px;
+
+  &.backgroundverde {
+    background-image: $textura-verde;
+  }
+  &.backgroundgris {
+    background-image: $textura-gris;
+  }
 }
 
-.pricingplans {
-  $pricingbackgrounds: (
-  single: url("/assets/images/spiration-light.png"),
-  double: url("/assets/images/pattern_congruent_pentagon.png"),
-  triple: url("/assets/images/pattern_sayagata-400px.png")
-  );
-
-  .huertitosingle {
-    background-image: map-get($pricingbackgrounds, single);
+.pricingplan {
+  &.huertitosingle {
+    background-image: $textura-pricing1;
   }
 
-  .huertitodouble {
-    background-image: map-get($pricingbackgrounds, double);
+  &.huertitodouble {
+    background-image: $textura-pricing2;
   }
 
-  .huertitotriple {
-    background-image: map-get($pricingbackgrounds, triple);
+  &.huertitotriple {
+    background-image: $textura-pricing3;
   }
 }
