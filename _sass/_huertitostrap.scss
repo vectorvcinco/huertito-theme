@@ -9,6 +9,29 @@ main, footer {
   padding: $spacer*2 $spacer*4 $spacer*2 $spacer*4;
 }
 
+@mixin logo-svg($animado: true) {
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+
+    @if $animado {
+      background-image: $logo-animado;
+    }
+    @else {
+      background-image: $logo-web;
+    }
+
+    h1, span {
+      visibility: hidden;
+    }
+  }
+
+a{
+  &.logo {
+      @include logo-svg(false);
+  }
+}
+
 header {
   height: 95vh;
   .banner {
@@ -22,13 +45,7 @@ header {
   }
 
   .logo {
-    background-image: $logo-animado;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: contain;
-    h1 {
-      visibility: hidden;
-    }
+      @include logo-svg;
   }
 }
 
