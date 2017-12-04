@@ -1,12 +1,14 @@
 @import "huertitovariables";
 // Las texturas e imagenes se importan en assets/main.scss
 
-main, footer {
-  background-color: color(white);
+@mixin respond-to ($val, $query) {
+  @media ($val: $query) {
+    @content
+  }
 }
 
-.homesection {
-  padding: $spacer*2 $spacer*4 $spacer*2 $spacer*4;
+main, footer {
+  background-color: color(white);
 }
 
 @mixin logo-svg($animado: true) {
@@ -25,6 +27,14 @@ main, footer {
       visibility: hidden;
     }
   }
+
+.homesection {
+  padding: $spacer*2 $spacer*4 $spacer*2 $spacer*4;
+  @include respond-to(min-width, 1700px){
+    padding: $spacer*2 20% $spacer*2 20%;
+  }
+}
+
 
 a{
   &.logo {
