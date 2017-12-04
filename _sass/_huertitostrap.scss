@@ -32,7 +32,11 @@ a{
   }
 }
 
-header {
+.page {
+  margin-top: 4em;
+}
+
+header.homeheader {
   height: 95vh;
   .banner {
     background-image: $jumbotron;
