@@ -13,22 +13,34 @@ $guaya: #ff5f72;
 $purple: #6f42c1;
 $gris2: #455A64;
 $tomato: #CB2027;
+$gray: #eee;
 
 $colors: (
   bluesaur: $bluesaur,
   planti: $planti,
-  silver: $silver,
+  "silver": $silver,
   darks: $darks,
-  blue: $blue,
-  red: $red,
-  orange: $orange,
-  green: $green,
+  "blue": $blue,
+  "red": $red,
+  "orange": $orange,
+  "green": $green,
   jellow: $jellow,
   guaya: $guaya,
-  purple: $purple,
+  "purple": $purple,
   gris2: $gris2,
-  tomato: $tomato,
-  white: $white,
-  gray: $gray-600,
+  "tomato": $tomato,
+  "white": $white,
+  "gray": $gray,
   gray-dark: $gray-800,
 );
+
+$theme-colors: (
+  primary: $blue,
+  secondary: $gray-600,
+  success: $green,
+  info: $cyan,
+  warning: $yellow,
+  danger: $red,
+  light: $gray-100,
+  dark: $gray-800
+) !default;

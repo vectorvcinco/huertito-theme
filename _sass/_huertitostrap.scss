@@ -8,26 +8,26 @@
   }
 }
 
+@mixin logo-svg($animado: true) {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+
+  @if $animado {
+    background-image: $logo-animado;
+  }
+  @else {
+    background-image: $logo-web;
+  }
+
+  h1, span {
+    visibility: hidden;
+  }
+}
+
 main, footer {
   background-color: color(white);
 }
-
-@mixin logo-svg($animado: true) {
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: contain;
-
-    @if $animado {
-      background-image: $logo-animado;
-    }
-    @else {
-      background-image: $logo-web;
-    }
-
-    h1, span {
-      visibility: hidden;
-    }
-  }
 
 .homesection {
   padding: $spacer*2 $spacer*4 $spacer*2 $spacer*4;
@@ -36,11 +36,8 @@ main, footer {
   }
 }
 
-
-a{
-  &.logo {
-      @include logo-svg(false);
-  }
+a.logo {
+  @include logo-svg(false);
 }
 
 .page {
@@ -60,7 +57,7 @@ header.homeheader {
   }
 
   .logo {
-      @include logo-svg;
+    @include logo-svg;
   }
 }
 
@@ -73,6 +70,11 @@ header.homeheader {
     background-size: auto 100%;
     background-image: colortextura($val);
   }
+
+  .bg-huertito-#{$color} {
+    background-color: $val;
+  }
+
 }
 
 .pricingplan {
