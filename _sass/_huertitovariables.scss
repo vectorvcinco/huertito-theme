@@ -1,37 +1,34 @@
 // Colores Huertito
 
-$gris: rgb(77, 83, 87);
-$gris2: rgb(64, 69, 69);
-$grisclaro: rgb(209, 212, 211);
-$verde: rgb(122, 184, 0);
-$luchuga: rgb(190, 214, 0);
-$rojo: rgb(198, 12, 48);
-$cafe: rgb(179, 153, 93);
-$cafe2: rgb(156, 100, 9);
+$bluesaur: #17A2B8;
+$planti: #7FC24E;
+$silver: #78909C;
+$darks: #343A40;
+$blue: #007bff;
+$red: #ec2224;
+$orange: #fd7e14;
+$green: #28a745;
+$jellow: #ffc107;
+$guaya: #ff5f72;
+$purple: #6f42c1;
+$gris2: #455A64;
+$tomato: #CB2027;
 
 $colors: (
+  bluesaur: $bluesaur,
+  planti: $planti,
+  silver: $silver,
+  darks: $darks,
   blue: $blue,
-  indigo: $indigo,
-  purple: $purple,
-  pink: $pink,
   red: $red,
   orange: $orange,
-  yellow: $yellow,
   green: $green,
-  teal: $teal,
-  cyan: $cyan,
+  jellow: $jellow,
+  guaya: $guaya,
+  purple: $purple,
+  gris2: $gris2,
+  tomato: $tomato,
   white: $white,
   gray: $gray-600,
   gray-dark: $gray-800,
-
-  // Colores Huertito
-  gris: $gris,
-  gris2: $gris2,
-  grisclaro: $grisclaro,
-  verde: $verde,
-  luchuga: $luchuga,
-  rojo: $rojo,
-  cafe: $cafe,
-  cafe2: $cafe2
-
 );

@@ -1,4 +1,5 @@
 @import "huertitovariables";
+@import "huertitoimages";
 // Las texturas e imagenes se importan en assets/main.scss
 
 @mixin respond-to ($val, $query) {
@@ -63,18 +64,14 @@ header.homeheader {
   }
 }
 
-.parallax {
-  z-index: -1;
-  background-attachment: fixed;
-  background-position: center;
-  height: $spacer*8;
-  background-size: auto 100%;
-
-  &.backgroundverde {
-    background-image: $textura-verde;
-  }
-  &.backgroundgris {
-    background-image: $textura-gris;
+@each $color, $val in $colors {
+  .parallax-#{$color} {
+    z-index: -1;
+    background-attachment: fixed;
+    background-position: center;
+    height: $spacer*8;
+    background-size: auto 100%;
+    background-image: colortextura($val);
   }
 }
 
