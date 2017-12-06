@@ -1,10 +1,10 @@
 {% if include.show %}
 {% for element in site.kitcontents %}
-<section class="homesection {% cycle 'bg-huertito-gray', 'bg-huertito-darks' %}" id="content">
+<section class="homesection {% cycle 'bg-huertito-gray', 'bg-huertito-darks text-white' %}" id="content">
   <div class="row">
     <div class="col">
       <h1 class="text-center">{{ element.title }}</h1>
-      <p class="text-center">{{ element }}</p>
+      <div class="text-center">{{ element }}</div>
     </div>
   </div>
 

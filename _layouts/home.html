@@ -1,35 +1,28 @@
 ---
 layout: default
 ---
+{% if site.features %}{% assign showfeatures=true %}{% endif %}
+{% if site.pricing %}{% assign showpricing=true %}{% endif %}
+{% if site.otherfeatures %}{% assign showofeatures=true %}{% endif %}
+{% if site.kitcontents %}{% assign showcontents=true %}{% endif %}
+
 {% include splash.html %}
 <main class="container-fluid px-0" style="z-index:1;position:relative;">
-
-  {% if site.features %}
-    {% assign showfeatures=true %}
-  {% endif %}
-  {% if site.pricing %}
-    {% assign showpricing=true %}
-  {% endif %}
-  {% if site.otherfeatures %}
-    {% assign showofeatures=true %}
-  {% endif %}
-  {% if site.kitcontents %}
-    {% assign showcontents=true %}
-  {% endif %}
-
 
   {% include features.html show=showfeatures %}
   {% include kitcontent.html show=showcontents %}
 
-  <div class="parallax-planti"></div>
+  <div class="parallax-guaya"></div>
 
   {% include pricing.html show=showpricing %}
 
-  <div class="parallax-planti"></div>
+  <div class="parallax-guaya"></div>
 
   {% include otherfeatures.html show=showofeatures %}
 
   <div class="parallax-bluesaur"></div>
+
+  {% unless site.love %}{% include variables.html %}{% endunless %}
 
 </main>
 {{ content }}
