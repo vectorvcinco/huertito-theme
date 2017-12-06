@@ -1,15 +1,23 @@
 <section class="homesection bg-huertito-silver" id="features">
 
+  {% if include.show %}
+
   {% for feature in site.features %}
   <div class="row py-3">
 
     <div class="col">
       <img src="{{ feature.image }}" class="img-fluid {% cycle 'float-left', 'float-right' %} {% cycle 'mr-4', 'ml-4' %} rounded" style="width:45%">
-      <h3 class="text-white text-capitalize">{{feature.title  }}</h3>
+      <h3 class="text-white text-capitalize">{{ feature.title }}</h3>
       <p>{{ feature }}</p>
     </div>
 
   </div>
   {% endfor %}
+
+  {% else %}
+    <h1>Features</h1>
+    <p>Para mostrar esta sección es necesario agregar una collection
+    <code>features</code> a <code>_config.yml</code></p>
+  {% endif %}
 
 </section>

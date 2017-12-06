@@ -4,19 +4,30 @@ layout: default
 {% include splash.html %}
 <main class="container-fluid px-0" style="z-index:1;position:relative;">
 
-  {% include features.html %}
+  {% if site.features %}
+    {% assign showfeatures=true %}
+  {% endif %}
+  {% if site.pricing %}
+    {% assign showpricing=true %}
+  {% endif %}
+  {% if site.otherfeatures %}
+    {% assign showofeatures=true %}
+  {% endif %}
+  {% if site.kitcontents %}
+    {% assign showcontents=true %}
+  {% endif %}
 
-  {% include kitcontent.html %}
 
-  {% include asistente.html %}
+  {% include features.html show=showfeatures %}
+  {% include kitcontent.html show=showcontents %}
 
   <div class="parallax-bluesaur"></div>
 
-  {% include pricing.html %}
+  {% include pricing.html show=showpricing %}
 
   <div class="parallax-purple"></div>
 
-  {% include otherfeatures.html %}
+  {% include otherfeatures.html show=showofeatures %}
 
   <div class="parallax-bluesaur"></div>
 

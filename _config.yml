@@ -32,6 +32,7 @@ collections:
   - features
   - pricing
   - otherfeatures
+  - kitcontents
 
 jekyll_analytics:
   GoogleAnalytics:          # Add, if you want to track with Google Analytics

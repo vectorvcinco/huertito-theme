@@ -1,5 +1,7 @@
 <section class="homesection bg-huertito-bluesaur" id="pricing">
 
+  {% if include.show %}
+
   <div class="row justify-content-center">
     <div class="col">
       <h1 class="text-center">¡Quiero mi Huertito!</h1>
@@ -26,5 +28,11 @@
     </div>
     {% endfor %}
   </div>
+
+  {% else %}
+  <h1>Pricing</h1>
+  <p>Para mostrar esta sección es necesario agregar una collection
+  <code>pricing</code> a <code>_config.yml</code></p>
+  {% endif %}
 
 </section>
