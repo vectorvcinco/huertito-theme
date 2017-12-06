@@ -1,4 +1,29 @@
 @import "huertitovariables";
+@import "huertitoimages";
+// Las texturas e imagenes se importan en assets/main.scss
+
+@mixin respond-to ($val, $query) {
+  @media ($val: $query) {
+    @content
+  }
+}
+
+@mixin logo-svg($animado: true) {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+
+  @if $animado {
+    background-image: $logo-animado;
+  }
+  @else {
+    background-image: $logo-web;
+  }
+
+  h1, span {
+    visibility: hidden;
+  }
+}
 
 main, footer {
   background-color: color(white);
@@ -6,22 +31,32 @@ main, footer {
 
 .homesection {
   padding: $spacer*2 $spacer*4 $spacer*2 $spacer*4;
-}
-
-.logo {
-  background-image: url("/assets/images/huertito-logo-animado.svg");
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: contain;
-  h1 {
-    visibility: hidden;
+  @include respond-to(min-width, 1700px){
+    padding: $spacer*2 20% $spacer*2 20%;
   }
 }
 
-header {
+a.logo {
+  @include logo-svg(false);
+}
+
+.page {
+  margin-top: 4em;
+}
+
+footer {
+  a {
+    color: color(guaya);
+    &:hover {
+      color: darken(color(guaya), 50)
+    }
+  }
+}
+
+header.homeheader {
   height: 95vh;
   .banner {
-    background-image: url("/assets/images/jumbotron.svg");
+    background-image: $jumbotron;
     background-size: contain;
     background-repeat: no-repeat;
     background-position: 10%;
@@ -29,36 +64,38 @@ header {
     width: 100%;
     position: fixed;
   }
+
+  .logo {
+    @include logo-svg;
+  }
 }
 
-.parallax {
-  z-index: -1;
-  background-attachment: fixed;
-  background-position: center;
-  height: $spacer;
-  background-image: url("/assets/images/textura-huertito-verde.svg");
-  background-size: auto 100%;
-  margin-bottom: $spacer*4;
-  margin-top: $spacer*4;
-  border-radius: 10px;
+@each $color, $val in $colors {
+  .parallax-#{$color} {
+    z-index: -1;
+    background-attachment: fixed;
+    background-position: center;
+    height: $spacer*8;
+    background-size: auto 100%;
+    background-image: colortextura($val);
+  }
+
+  .bg-huertito-#{$color} {
+    background-color: $val;
+  }
+
 }
 
-.pricingplans {
-  $pricingbackgrounds: (
-  single: url("/assets/images/spiration-light.png"),
-  double: url("/assets/images/pattern_congruent_pentagon.png"),
-  triple: url("/assets/images/pattern_sayagata-400px.png")
-  );
-
-  .huertitosingle {
-    background-image: map-get($pricingbackgrounds, single);
+.pricingplan {
+  &.huertitosingle {
+    background-image: $textura-pricing1;
   }
 
-  .huertitodouble {
-    background-image: map-get($pricingbackgrounds, double);
+  &.huertitodouble {
+    background-image: $textura-pricing2;
   }
 
-  .huertitotriple {
-    background-image: map-get($pricingbackgrounds, triple);
+  &.huertitotriple {
+    background-image: $textura-pricing3;
   }
 }

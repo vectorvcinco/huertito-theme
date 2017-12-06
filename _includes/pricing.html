@@ -1,4 +1,6 @@
-<section class="homesection px-1">
+<section class="homesection bg-huertito-bluesaur" id="pricing">
+
+  {% if include.show %}
 
   <div class="row justify-content-center">
     <div class="col">
@@ -6,9 +8,9 @@
     </div>
   </div>
 
-  <div class="card-deck pricingplans">
+  <div class="card-deck">
     {% for plan in site.pricing %}
-    <div class="card {{ plan.class }}">
+    <div class="card pricingplan {{ plan.class }} my-2">
 
       <div class="card-body">
         <h2 class="card-title text-center">{{ plan.price | money ":MXN" }}</h2>
@@ -26,5 +28,23 @@
     </div>
     {% endfor %}
   </div>
+
+  {% else %}
+  <h1>Pricing</h1>
+  <p>Para mostrar esta sección es necesario agregar una collection
+  <code>pricing</code> a <code>_config.yml</code></p>
+  <p>
+    Los archivos <code>.md</code> en esta collection deben tener el siguiente
+    frontmatter:
+{% highlight markdown %}
+---
+class: huertitosingle
+price: 1000.00
+planname: un huertito
+---
+{% endhighlight %}
+  </p>
+
+  {% endif %}
 
 </section>

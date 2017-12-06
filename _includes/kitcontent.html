@@ -1,15 +1,35 @@
-<section class="homesection">
+{% if include.show %}
+{% for element in site.kitcontents %}
+<section class="homesection {% cycle 'bg-huertito-gray', 'bg-huertito-darks text-white' %}" id="content">
   <div class="row">
     <div class="col">
-      <h1 class="text-center">¿Qué incluye Huertito?</h1>
-      <p class="text-center">Aenean leo orci, aliquam eu urna a, porttitor mattis arcu.</p>
+      <h1 class="text-center">{{ element.title }}</h1>
+      <div class="text-center">{{ element }}</div>
     </div>
   </div>
 
   <div class="row">
     <div class="col">
-      <img class="img-fluid rounded mx-auto d-block" src="http://lorempixel.com/output/abstract-q-c-640-480-3.jpg" alt="Contenido">
+      <img class="img-fluid rounded mx-auto d-block" src="{{ element.image }}" alt="Contenido">
     </div>
   </div>
+</section>
+{% endfor %}
+{% else %}
+<section class="homesection bg-huertito-gray" id="content">
+  <h1>Contenido del kit</h1>
+  <p>Para mostrar esta sección es necesario agregar una collection
+  <code>kitcontents</code> a <code>_config.yml</code></p>
+  <p>
+    Los archivos <code>.md</code> en esta collection deben tener el siguiente
+    frontmatter:
+{% highlight markdown %}
+---
+title: ¿Qué incluye Huertito?
+image: https://example.com/image.jpg
+---
+{% endhighlight %}
+  </p>
 
 </section>
+{% endif %}
