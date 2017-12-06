@@ -16,8 +16,20 @@
 
   {% else %}
     <h1>Features</h1>
-    <p>Para mostrar esta sección es necesario agregar una collection
-    <code>features</code> a <code>_config.yml</code></p>
+    <p>
+      Para mostrar esta sección es necesario agregar una collection
+      <code>features</code> a <code>_config.yml</code>
+    </p>
+    <p>
+      Los archivos <code>.md</code> en esta collection deben tener el siguiente
+      frontmatter:
+{% highlight markdown %}
+---
+image: http://example.com/image.jpg
+title: Feature 1
+---
+{% endhighlight %}
+    </p>
   {% endif %}
 
 </section>
