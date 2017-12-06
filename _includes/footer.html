@@ -5,21 +5,18 @@
       <h2>{{ site.title | escape }}</h2>
       <p>{{ site.description | escape }}</p>
       <p><small>{{ site.love }}</small></p>
-      <p><small>Made possible thanks to <a href="{% link opensource.md %}">these</a> projects</small></p>
+      {% for element in site.pages %}
+        {% if element.permalink == "/respect/" %}
+        <p><small>Made possible thanks to <a href="{% link opensource.md %}">these</a> projects</small></p>
+        {% endif %}
+      {% endfor %}
     </div>
 
     <div class="col">
       <h3>Contacto:</h3>
       <ul class="list-unstyled pl-2">
-        <li>
-        {% if site.author %}
-          {{ site.author | escape }}
-        {% else %}
-          {{ site.title | escape }}
-        {% endif %}
-        </li>
         {% if site.email %}
-        <li><a href="mailto:{{ site.email }}">{{ site.email }}</a></li>
+        <li><a href="mailto:{{ site.email }}"><span class="icon icon--twitter">{% include mail.svg %}</span>{{ site.email }}</a></li>
         {% endif %}
         {% if site.github_username %}
         <li>

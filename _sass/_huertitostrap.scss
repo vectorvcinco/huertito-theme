@@ -44,6 +44,15 @@ a.logo {
   margin-top: 4em;
 }
 
+footer {
+  a {
+    color: color(guaya);
+    &:hover {
+      color: darken(color(guaya), 50)
+    }
+  }
+}
+
 header.homeheader {
   height: 95vh;
   .banner {
