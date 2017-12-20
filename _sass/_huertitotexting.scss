@@ -1,0 +1,52 @@
+blockquote.chat {
+  background-color: rgba(#fff, .5);
+  border-radius: $spacer;
+  padding-top: $spacer/2 0;
+  display: flex;
+  flex-direction: column;
+  margin: $spacer;
+
+  p {
+    border-radius: $spacer;
+    padding: $spacer/2 $spacer;
+    margin: $spacer/2;
+  }
+
+  .user {
+    background-color: #B6F26B;
+    text-align: right;
+    align-self: flex-end;
+    &:before {
+      content: "Read";
+      margin-right: $spacer;
+    }
+  }
+
+  .user, .huertito {
+    &:before, &:after {
+      font-size: 30%;
+      color: theme-color(secondary);
+    }
+  }
+
+  .huertito {
+    background-color: white;
+    align-self: flex-start;
+    &:after {
+      content: "Read";
+      margin-left: $spacer;
+    }
+    &:before {
+      content: "";
+      display: inline-block;
+      width: $spacer*3;
+      height: $spacer*2;
+      background-image: $user-circle;
+      background-size: $spacer*2 $spacer*2;
+      background-repeat: no-repeat;
+      background-position: center;
+      vertical-align: middle;
+    }
+  }
+
+}
