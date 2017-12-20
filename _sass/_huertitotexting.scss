@@ -4,12 +4,13 @@ blockquote.chat {
   padding-top: $spacer/2 0;
   display: flex;
   flex-direction: column;
-  margin: $spacer;
 
   p {
     border-radius: $spacer;
     padding: $spacer/2 $spacer;
     margin: $spacer/2;
+    display: flex;
+    flex-direction: row;
   }
 
   .user {
@@ -26,6 +27,7 @@ blockquote.chat {
     &:before, &:after {
       font-size: 30%;
       color: theme-color(secondary);
+      align-self: flex-end;
     }
   }
 
