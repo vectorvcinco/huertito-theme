@@ -13,21 +13,31 @@ blockquote.chat {
     flex-direction: row;
   }
 
-  .user {
-    background-color: #B6F26B;
-    text-align: right;
-    align-self: flex-end;
-    &:before {
-      content: "Read";
-      margin-right: $spacer;
-    }
-  }
-
   .user, .huertito {
     &:before, &:after {
       font-size: 30%;
-      color: theme-color(secondary);
+      color: darken(theme-color(secondary),10%);
       align-self: flex-end;
+      position: absolute;
+    }
+  }
+
+  .user {
+    $user-background: #B6F26B;
+    background-color: $user-background;
+    text-align: right;
+    align-self: flex-end;
+
+    &:before {
+      content: "Read";
+      margin-left: -3*$spacer;
+    }
+
+    &:after {
+      margin-right: 3.5*$spacer;
+      content: chattail($user-background);
+      margin-top: 1.5*$spacer;
+      margin-left: -1*$spacer;
     }
   }
 
@@ -39,16 +49,12 @@ blockquote.chat {
       margin-left: $spacer;
     }
     &:before {
-      content: "";
-      display: inline-block;
-      width: $spacer*3;
-      height: $spacer*2;
-      background-image: $user-circle;
-      background-size: $spacer*2 $spacer*2;
-      background-repeat: no-repeat;
-      background-position: center;
-      vertical-align: middle;
+      margin-right: 3.5*$spacer;
+      content: chattailback(white);
+      margin-top: 1.5*$spacer;
+      margin-left: -1*$spacer;
     }
   }
+
 
 }
