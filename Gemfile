@@ -1,7 +1,7 @@
 source "https://rubygems.org"
 gemspec
 
-gem 'bootstrap', '~> 4.0.0.alpha6'
+gem 'bootstrap', '~> 4.0.0.beta2.1'
 
 group :jekyll_plugins do
     gem 'github-pages'

@@ -1,5 +1,6 @@
 @import "huertitovariables";
 @import "huertitoimages";
+@import "huertitotexting";
 // Las texturas e imagenes se importan en assets/main.scss
 
 @mixin respond-to ($val, $query) {
@@ -33,6 +34,13 @@ main, footer {
   padding: $spacer*2 $spacer*4 $spacer*2 $spacer*4;
   @include respond-to(min-width, 1700px){
     padding: $spacer*2 20% $spacer*2 20%;
+  }
+
+  @include respond-to(max-width, 500px){
+    h3 {
+      margin-top: $spacer;
+      text-align: center;
+    }
   }
 }
 
@@ -77,7 +85,7 @@ header.homeheader {
     background-position: center;
     height: $spacer*8;
     background-size: auto 100%;
-    background-image: colortextura($val);
+//    background-image: colortextura($val);
   }
 
   .bg-huertito-#{$color} {

@@ -1,0 +1,57 @@
+blockquote.chat {
+  background-color: rgba(#fff, .5);
+  border-radius: $spacer;
+  padding-top: $spacer/2 0;
+  padding-bottom: $spacer;
+  display: flex;
+  flex-direction: column;
+
+  p {
+    border-radius: $spacer;
+    padding: $spacer/2 $spacer;
+    margin: $spacer/2;
+    display: flex;
+    flex-direction: row;
+  }
+
+  .user, .huertito {
+    &:before, &:after {
+      font-size: 30%;
+      color: darken(theme-color(secondary),10%);
+      position: absolute;
+    }
+  }
+
+  .user {
+    $user-background: #B6F26B;
+    background-color: $user-background;
+    align-self: flex-end;
+
+    &:before {
+      content: "Read";
+      margin-left: -3*$spacer;
+    }
+
+    &:after {
+      content: chattail($user-background);
+      margin: 1.5*$spacer 3.5*$spacer auto -1*$spacer;
+    }
+  }
+
+  .huertito {
+    background-color: $white;
+    align-self: flex-start;
+
+    &:after {
+      content: "Read";
+      margin-left: 1.5*$spacer;
+    }
+
+    &:before {
+      content: chattailback($white);
+      margin: 1.5*$spacer 3.5*$spacer auto -1*$spacer
+    }
+  }
+
+
+}
