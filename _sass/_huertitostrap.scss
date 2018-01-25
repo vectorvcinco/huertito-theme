@@ -85,7 +85,7 @@ header.homeheader {
     background-position: center;
     height: $spacer*8;
     background-size: auto 100%;
-//    background-image: colortextura($val);
+    background-image: colortextura($val);
   }
 
   .bg-huertito-#{$color} {
