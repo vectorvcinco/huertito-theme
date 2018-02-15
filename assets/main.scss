@@ -10,4 +10,10 @@
 @import "animate";
 
 // Huertito SCSS
+$baseurl: "";
+
+@function relative_url($url){
+  @return url($baseurl + $url)
+}
+
 @import "huertitostrap";
