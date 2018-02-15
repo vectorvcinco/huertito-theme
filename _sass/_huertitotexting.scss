@@ -13,7 +13,7 @@ blockquote.chat {
   p {
     border-radius: $spacer;
     padding: $spacer/2 $spacer;
-    margin: $spacer/2;
+    margin: $spacer*0.75;
     display: flex;
     max-width: 70%;
   }
@@ -23,11 +23,13 @@ blockquote.chat {
     font-size: 30%;
     content: "Read";
     width: $read-width;
+    margin-left: -1.5*$spacer;
   }
 
   .user:before, .huertito:after {
-    position: absolute;
+    position: relative;
     display: inline-block;
+    align-self: flex-start;
   }
 
   .user:after, .huertito:before {
@@ -43,7 +45,7 @@ blockquote.chat {
 
     &:before {
       text-align: right;
-      margin-left: -1*$read-width - 1.5*$spacer;
+      left: -1*$read-width;
     }
 
     &:after {
@@ -57,7 +59,7 @@ blockquote.chat {
     align-self: flex-start;
 
     &:after {
-      margin-left: 1.5*$spacer;
+      left: 3*$spacer;
     }
 
     &:before {
