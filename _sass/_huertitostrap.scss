@@ -94,6 +94,10 @@ header.homeheader {
 
 }
 
+.text-shadow {
+  text-shadow: 1px 1px black;
+}
+
 .pricingplan {
   &.huertitosingle {
     background-image: $textura-pricing1;
