@@ -3,9 +3,9 @@
 @import "images/tail";
 // url('data:image/svg+xml;utf8, ... ')
 
-$jumbotron: url("/assets/images/jumbotron.svg");
-$logo-animado: url("/assets/images/huertito-logo-animado.svg");
-$logo-web: url("/assets/images/huertito-logo-web.svg");
-$textura-pricing1: url("/assets/images/spiration-light.png");
-$textura-pricing2: url("/assets/images/pattern_congruent_pentagon.png");
-$textura-pricing3: url("/assets/images/pattern_sayagata-400px.png");
+$jumbotron: relative_url("/assets/images/jumbotron.svg");
+$logo-animado: relative_url("/assets/images/huertito-logo-animado.svg");
+$logo-web: relative_url("/assets/images/huertito-logo-web.svg");
+$textura-pricing1: relative_url("/assets/images/spiration-light.png");
+$textura-pricing2: relative_url("/assets/images/pattern_congruent_pentagon.png");
+$textura-pricing3: relative_url("/assets/images/pattern_sayagata-400px.png");

@@ -1,5 +1,9 @@
 blockquote.chat {
-  background-color: rgba(#fff, .5);
+  $user-background: #B6F26B;
+  $huertito-background: $white;
+  $read-width: 2rem;
+
+  background-color: rgba($white, .5);
   border-radius: $spacer;
   padding-top: $spacer/2 0;
   padding-bottom: $spacer;
@@ -11,47 +15,55 @@ blockquote.chat {
     padding: $spacer/2 $spacer;
     margin: $spacer/2;
     display: flex;
-    flex-direction: row;
+    max-width: 70%;
   }
 
-  .user, .huertito {
-    &:before, &:after {
-      font-size: 30%;
-      color: darken(theme-color(secondary),10%);
-      position: absolute;
-    }
+  .user:before, .huertito:after {
+    color: darken(theme-color(secondary),10%);
+    font-size: 30%;
+    content: "Read";
+    width: $read-width;
+  }
+
+  .user:before, .huertito:after {
+    position: absolute;
+    display: inline-block;
+  }
+
+  .user:after, .huertito:before {
+    position: relative;
+    display: inline-block;
+    align-self: flex-end;
+    top: 2*$spacer;
   }
 
   .user {
-    $user-background: #B6F26B;
     background-color: $user-background;
     align-self: flex-end;
 
     &:before {
-      content: "Read";
-      margin-left: -3*$spacer;
+      text-align: right;
+      margin-left: -1*$read-width - 1.5*$spacer;
     }
 
     &:after {
       content: chattail($user-background);
-      margin: 1.5*$spacer 3.5*$spacer auto -1*$spacer;
+      margin-left: -2rem;
     }
   }
 
   .huertito {
-    background-color: $white;
+    background-color: $huertito-background;
     align-self: flex-start;
 
     &:after {
-      content: "Read";
       margin-left: 1.5*$spacer;
     }
 
     &:before {
-      content: chattailback($white);
-      margin: 1.5*$spacer 3.5*$spacer auto -1*$spacer
+      content: chattailback($huertito-background);
+      margin-right: -1.5rem;
     }
   }
-
 
 }
