@@ -16,6 +16,10 @@ layout: default
 
   {% include pricing.html show=showpricing %}
 
+  {%if site.kickstarter %}
+  {% include kickstarter.html %}
+  {% endif %}
+
   <div class="parallax-guaya"></div>
 
   {% include otherfeatures.html show=showofeatures %}

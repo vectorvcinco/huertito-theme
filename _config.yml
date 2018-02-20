@@ -24,6 +24,8 @@ exclude:
   - Gemfile
   - Gemfile.lock
 
+kickstarter: true
+
 collections:
   - features
   - pricing
