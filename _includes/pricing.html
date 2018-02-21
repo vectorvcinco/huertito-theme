@@ -1,6 +1,6 @@
 <section class="homesection bg-huertito-bluesaur" id="pricing">
 
-  {% if include.show and site.kickstarter == false %}
+  {% if include.show %}
 
   <div class="row justify-content-center">
     <div class="col">
@@ -29,7 +29,7 @@
     {% endfor %}
   </div>
 
-  {% else %}
+  {% elsif site.kickstarter == false %}
   <h1>Pricing</h1>
   <p>Para mostrar esta sección es necesario agregar una collection
   <code>pricing</code> a <code>_config.yml</code></p>
