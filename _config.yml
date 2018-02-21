@@ -25,6 +25,7 @@ exclude:
   - Gemfile.lock
 
 kickstarter: true
+kickstarter_image: https://d3mlfyygrfdi2i.cloudfront.net/kickstarter-logo-light.png
 
 collections:
   - features

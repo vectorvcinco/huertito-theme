@@ -2,7 +2,7 @@
 
 Gem::Specification.new do |spec|
   spec.name          = "huertito-theme"
-  spec.version       = "2.2.0"
+  spec.version       = "2.4.1"
   spec.authors       = ["Ivan Reyes"]
   spec.email         = ["ivanreyesconde@gmail.com"]
 

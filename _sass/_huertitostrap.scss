@@ -78,13 +78,40 @@ header.homeheader {
   }
 }
 
+.contentstitle {
+  top:3.3*$spacer;
+  position:sticky;
+  z-index:-1;
+}
+
+.content {
+  height:90vh;
+  width:100%;
+  &.content-1 {
+
+    top: 6.5rem;
+    position: sticky;
+    z-index: -3;
+  }
+  &.content-2 {
+    top: auto;
+    position: relative;
+    z-index: -2;
+  }
+  &.content-3 {
+    top: auto;
+    position: relative;
+    z-index: -1;
+  }
+}
+
 @each $color, $val in $colors {
   .parallax-#{$color} {
     z-index: -1;
     background-attachment: fixed;
     background-position: center;
     height: $spacer*8;
-    background-size: auto 100%;
+    background-size: 200% auto;
     background-image: colortextura($val);
   }
 
