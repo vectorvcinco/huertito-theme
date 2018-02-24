@@ -9,6 +9,12 @@
   }
 }
 
+h2, h3, h4, h5 {
+  font-family: 'Amatic SC', cursive;
+  font-weight: bold;
+  letter-spacing: 0.5*$spacer;
+}
+
 @mixin logo-svg($animado: true) {
   background-position: center;
   background-repeat: no-repeat;
@@ -85,23 +91,23 @@ header.homeheader {
 }
 
 .content {
-  height:90vh;
+  height:80vh;
   width:100%;
   &.content-1 {
 
-    top: 6.5rem;
+    top: 7*$spacer;
+    position: sticky;
+    z-index: -4;
+  }
+  &.content-2 {
+    top: 7*$spacer;
     position: sticky;
     z-index: -3;
   }
-  &.content-2 {
-    top: auto;
-    position: relative;
-    z-index: -2;
-  }
   &.content-3 {
-    top: auto;
-    position: relative;
-    z-index: -1;
+    top: 7*$spacer;
+    position: sticky;
+    z-index: -2;
   }
 }
 
