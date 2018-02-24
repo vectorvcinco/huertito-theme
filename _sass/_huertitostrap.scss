@@ -9,10 +9,13 @@
   }
 }
 
+body {
+  font-family: 'Ubuntu', sans-serif;
+}
+
 h2, h3, h4, h5 {
-  font-family: 'Amatic SC', cursive;
-  font-weight: bold;
-  letter-spacing: 0.5*$spacer;
+font-family: 'Comfortaa', cursive;
+font-size: 2.5*$spacer;
 }
 
 @mixin logo-svg($animado: true) {
@@ -93,6 +96,15 @@ header.homeheader {
 .content {
   height:80vh;
   width:100%;
+
+  h2, h3, h4, h5 {
+     font-family: 'Amatic SC', cursive;
+     letter-spacing: 0.2*$spacer;
+     font-size: 4*$spacer;
+     text-transform: uppercase;
+     font-weight: bold;
+  }
+
   &.content-1 {
 
     top: 7*$spacer;
