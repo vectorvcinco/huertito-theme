@@ -9,39 +9,21 @@
   {% for element in site.kitcontents %}
   <div class="homesection py-5 d-flex flex-column justify-content-between {% cycle 'bg-huertito-gray', 'bg-huertito-darks text-white' %} content {% cycle 'content-1','content-2','content-3' %}">
 
-
-
+    {% for item in element.items %}
     <div class="row h-100 w-75 mx-auto">
-
-
-
-
-
       <div class="col">
-
-
-        <img style="  float: left;
-  width: 250px;
-  shape-outside: url(https://upload.wikimedia.org/wikipedia/commons/3/34/Red_star.svg);
-  shape-margin:20px;
-  margin-right: 20px;
-  margin-bottom: 20px;" src="https://upload.wikimedia.org/wikipedia/commons/3/34/Red_star.svg" alt="" class="star">
-
-        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use. </p>
-
-
-
-
+        <img class="content-item mr-3 mb-3" src="{{ item[1].image | relative_url }}" style="shape-outside:url({{ item[1].image | relative_url }})" alt="{{ item[0] }}">
+        <p>{{ item[1].text }}</p>
       </div>
     </div>
+    {% endfor %}
+
     <div class="row pb-5">
       <div class="col">
         <h3>{{ element.title }}</h3>
         <div>{{ element }}</div>
       </div>
     </div>
-
-
 
   </div>
   {% endfor %}

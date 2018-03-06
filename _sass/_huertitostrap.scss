@@ -121,6 +121,15 @@ header.homeheader {
     position: sticky;
     z-index: -2;
   }
+
+  .content-item {
+    float: left;
+    height: 80%;
+    shape-margin:20px;
+//    width: 250px;
+//    margin-right: 20px;
+//    margin-bottom: 20px;
+  }
 }
 
 @each $color, $val in $colors {
