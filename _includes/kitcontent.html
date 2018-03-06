@@ -1,27 +1,29 @@
 <section>
   <div class="contentstitle">
-    <div class="row bg-huertito-gray pt-4">
+    <div class="bg-huertito-gray pt-4">
       <div class="col">
-        <h1 class="text-center">¿Qué incluye Huertito?</h1>
+        <h1 class="text-center display-4 my-0">¿Qué incluye Huertito?</h1>
       </div>
     </div>
   </div>
   {% for element in site.kitcontents %}
   <div class="homesection py-5 d-flex flex-column justify-content-between {% cycle 'bg-huertito-gray', 'bg-huertito-darks text-white' %} content {% cycle 'content-1','content-2','content-3' %}">
 
-    {% for item in element.items %}
-    <div class="row h-100 w-75 mx-auto">
-      <div class="col">
-        <img class="content-item mr-3 mb-3" src="{{ item[1].image | relative_url }}" style="shape-outside:url({{ item[1].image | relative_url }})" alt="{{ item[0] }}">
-        <p>{{ item[1].text }}</p>
+    <div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel">
+      <div class="carousel-inner">
+        {% for item in element.items %}
+        <div class="{% if forloop.first %}active{% endif %} carousel-item">
+          <img class="content-item mr-3 mb-3" src="{{ item[1].image | relative_url }}" style="shape-outside:url({{ item[1].image | relative_url }})" alt="{{ item[0] }}">
+          <p class="py-5 lead">{{ item[1].text }}</p>
+        </div>
+        {% endfor %}
       </div>
     </div>
-    {% endfor %}
 
-    <div class="row pb-5">
-      <div class="col">
-        <h3>{{ element.title }}</h3>
-        <div>{{ element }}</div>
+    <div class="row">
+      <div class="col lead">
+        <h3 class="display-4">{{ element.title }}</h3>
+        <p>{{ element }}</p>
       </div>
     </div>
 
