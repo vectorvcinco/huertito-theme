@@ -9,8 +9,15 @@
   {% for element in site.kitcontents %}
   <div class="homesection py-5 d-flex flex-column justify-content-between {% cycle 'bg-huertito-gray', 'bg-huertito-darks text-white' %} content {% cycle 'content-1','content-2','content-3' %}">
 
-    <div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel">
-      <div class="carousel-inner">
+    <div id="itemscarousel" class="carousel slide h-75 mx-auto" data-ride="carousel">
+
+      <ol class="carousel-indicators">
+        {% for item in element.items %}
+        <li data-target="#itemscarousel" data-slide-to="{{ forloop.index0 }}" class="{% if forloop.first %}active{% endif %}"></li>
+        {% endfor %}
+      </ol>
+
+      <div class="carousel-inner h-100 w-75 mx-auto">
         {% for item in element.items %}
         <div class="{% if forloop.first %}active{% endif %} carousel-item">
           <img class="content-item mr-3 mb-3" src="{{ item[1].image | relative_url }}" style="shape-outside:url({{ item[1].image | relative_url }})" alt="{{ item[0] }}">
