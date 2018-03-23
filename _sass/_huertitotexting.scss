@@ -20,7 +20,7 @@ blockquote.chat {
 
   .user:before, .huertito:after {
     color: darken(theme-color(secondary),10%);
-    font-size: 30%;
+    font-size: 0.75 * $spacer;
     content: "Read";
     width: $read-width;
     margin-left: -1.5*$spacer;

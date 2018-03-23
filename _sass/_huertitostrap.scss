@@ -106,6 +106,12 @@ header.homeheader {
 }
 
 @each $color, $val in $colors {
+  .bg-huertito-#{$color} {
+    background-color: $val;
+  }
+}
+
+@each $color, $val in (bluesaur: $bluesaur,) {
   .parallax-#{$color} {
     z-index: -1;
     background-attachment: fixed;
@@ -114,11 +120,6 @@ header.homeheader {
     background-size: 200% auto;
     background-image: colortextura($val);
   }
-
-  .bg-huertito-#{$color} {
-    background-color: $val;
-  }
-
 }
 
 .text-shadow {
