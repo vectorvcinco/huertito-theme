@@ -1,7 +1,7 @@
 @function chattail($color) {
-  @return  url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 7.9374995 7.9374995" height="25" width="25"><g id="layer1" transform="translate(0 -289.0625)"><path id="path10" d="m 0.02138216,289.08173 c -0.16852764,6.34989 11.00400984,9.46413 7.04856844,7.11933 -3.5637736,-2.11262 -3.7453338,-6.29362 -3.7457516,-7.11933 z" style="fill:#{$color};" /></g></svg>');
+  @return  url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 7.9374995 7.9374995" height="25" width="25"><g id="layer1" transform="translate(0 -289.0625)"><path id="path10" d="m 0.02138216,289.08173 c -0.16852764,6.34989 11.00400984,9.46413 7.04856844,7.11933 -3.5637736,-2.11262 -3.7453338,-6.29362 -3.7457516,-7.11933 z" style="fill:#{encodecolor($color)};" /></g></svg>');
 }
 
 @function chattailback($color) {
-  @return  url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 7.9374995 7.9374995" height="25" width="25"><g id="layer1" transform="matrix(-1,0,0,1,7.9375973,-289.0625)"><path id="path10" d="m 0.02138216,289.08173 c -0.16852764,6.34989 11.00400984,9.46413 7.04856844,7.11933 -3.5637736,-2.11262 -3.7453338,-6.29362 -3.7457516,-7.11933 z" style="fill:#{$color};" /></g></svg>');
+  @return  url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 7.9374995 7.9374995" height="25" width="25"><g id="layer1" transform="matrix(-1,0,0,1,7.9375973,-289.0625)"><path id="path10" d="m 0.02138216,289.08173 c -0.16852764,6.34989 11.00400984,9.46413 7.04856844,7.11933 -3.5637736,-2.11262 -3.7453338,-6.29362 -3.7457516,-7.11933 z" style="fill:#{encodecolor($color)};" /></g></svg>');
 }
