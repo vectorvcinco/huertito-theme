@@ -1,37 +1,57 @@
-  {% if include.show %}
+{% if include.show %}
 
 <section>
   <div class="contentstitle">
     <div class="bg-huertito-gray pt-4">
       <div class="col">
-        <h1 class="text-center display-4 my-0">¿Qué incluye Huertito?</h1>
+        <h1 class="text-center my-0">¿Qué incluye Huertito?</h1>
       </div>
     </div>
   </div>
   {% for element in site.kitcontents %}
   <div class="homesection py-5 d-flex flex-column justify-content-between {% cycle 'bg-huertito-gray', 'bg-huertito-darks text-white' %} content {% cycle 'content-1','content-2','content-3' %}">
 
-    <div id="itemscarousel" class="carousel slide h-75 mx-auto" data-ride="carousel">
+    <div class="row h-100">
+      <div class="col">
 
-      <ol class="carousel-indicators">
-        {% for item in element.items %}
-        <li data-target="#itemscarousel" data-slide-to="{{ forloop.index0 }}" class="{% if forloop.first %}active{% endif %}"></li>
-        {% endfor %}
-      </ol>
+        <div id="itemscarousel" class="carousel slide h-100 mx-auto" data-ride="carousel">
 
-      <div class="carousel-inner h-100 w-75 mx-auto">
-        {% for item in element.items %}
-        <div class="{% if forloop.first %}active{% endif %} carousel-item">
-          <img class="content-item mr-3 mb-3" src="{{ item[1].image | relative_url }}" style="shape-outside:url({{ item[1].image | relative_url }})" alt="{{ item[0] }}">
-          <p class="py-5 lead">{{ item[1].text }}</p>
+          <ol class="carousel-indicators indicators-guaya">
+            {% for item in element.items %}
+            <li data-target="#itemscarousel" data-slide-to="{{ forloop.index0 }}" class="{% if forloop.first %}active{% endif %}"></li>
+            {% endfor %}
+          </ol>
+
+          <div class="carousel-inner h-100 mx-auto">
+            {% for item in element.items %}
+            <div class="{% if forloop.first %}active{% endif %} h-100 carousel-item">
+              <img class="content-item img-fluid h-75 d-block mx-auto my-auto" src="{{ item[1].image | relative_url }}" style="shape-outside:url({{ item[1].image | relative_url }})" alt="{{ item[0] }}">
+
+              <div class="carousel-caption d-none d-md-block text-secondary">
+                <h5>{{ item[1].text }}</h5>
+              </div>
+
+            </div>
+            {% endfor %}
+          </div>
+
+          <a class="carousel-control-prev" href="#itemscarousel" role="button" data-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+          </a>
+          <a class="carousel-control-next" href="#itemscarousel" role="button" data-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+          </a>
+
         </div>
-        {% endfor %}
       </div>
+
     </div>
 
     <div class="row">
-      <div class="col lead">
-        <h3 class="display-4">{{ element.title }}</h3>
+      <div class="col lead align-self-end">
+        <h2>{{ element.title }}</h2>
         <p>{{ element }}</p>
       </div>
     </div>

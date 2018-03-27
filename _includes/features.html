@@ -6,7 +6,7 @@
   <div class="row py-3">
 
     <div class="offset-md-1 col-md-5">
-      <img src="{{ feature.image }}" class="rounded mx-auto d-block">
+      <img src="{{ feature.image }}" class="rounded img-fluid mx-auto d-block">
     </div>
     <div class="col-md-5 pt-4">
       <h3 class="text-white text-capitalize text-shadow">{{ feature.title }}</h3>
@@ -16,22 +16,6 @@
   </div>
   {% endfor %}
 
-  {% else %}
-    <h1>Features</h1>
-    <p>
-      Para mostrar esta sección es necesario agregar una collection
-      <code>features</code> a <code>_config.yml</code>
-    </p>
-    <p>
-      Los archivos <code>.md</code> en esta collection deben tener el siguiente
-      frontmatter:
-{% highlight markdown %}
----
-image: http://example.com/image.jpg
-title: Feature 1
----
-{% endhighlight %}
-    </p>
   {% endif %}
 
 </section>
