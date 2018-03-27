@@ -9,6 +9,14 @@
   }
 }
 
+body {
+  font-family: 'Ubuntu', sans-serif;
+}
+
+h2, h3, h4, h5 {
+font-family: 'Comfortaa', cursive;
+}
+
 @mixin logo-svg($animado: true) {
   background-position: center;
   background-repeat: no-repeat;
@@ -85,23 +93,35 @@ header.homeheader {
 }
 
 .content {
-  height:90vh;
+  height:80vh;
   width:100%;
+
+  h2, h3, h4, h5 {
+     font-family: 'Amatic SC', cursive;
+     letter-spacing: 0.2*$spacer;
+     text-transform: uppercase;
+     font-weight: bold;
+  }
+
   &.content-1 {
 
-    top: 6.5rem;
+    top: 7*$spacer;
+    position: sticky;
+    z-index: -4;
+  }
+  &.content-2 {
+    top: 7*$spacer;
     position: sticky;
     z-index: -3;
   }
-  &.content-2 {
-    top: auto;
-    position: relative;
+  &.content-3 {
+    top: 7*$spacer;
+    position: sticky;
     z-index: -2;
   }
-  &.content-3 {
-    top: auto;
-    position: relative;
-    z-index: -1;
+
+  .content-item {
+    shape-margin:30px;
   }
 }
 
@@ -109,6 +129,21 @@ header.homeheader {
   .bg-huertito-#{$color} {
     background-color: $val;
   }
+
+  .carousel-indicators{
+    &.indicators-#{$color}{
+
+      .active {
+        background-color: rgba($val, 0.5) !important
+      }
+
+      li {
+        background-color: $val !important;
+      }
+
+    }
+  }
+
 }
 
 @each $color, $val in (bluesaur: $bluesaur,) {
@@ -138,4 +173,12 @@ header.homeheader {
   &.huertitotriple {
     background-image: $textura-pricing3;
   }
+}
+
+.carousel-control-next-icon {
+  background-image: navfwdarrow($guaya) !important;
+}
+
+.carousel-control-prev-icon {
+  background-image: navbackarrow($guaya) !important;
 }
