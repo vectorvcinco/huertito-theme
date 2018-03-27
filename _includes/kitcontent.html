@@ -11,8 +11,13 @@
   {% for element in site.kitcontents %}
   <div class="homesection py-5 d-flex flex-column justify-content-between {% cycle 'bg-huertito-gray', 'bg-huertito-darks text-white' %} content {% cycle 'content-1','content-2','content-3' %}">
 
-    <div class="row h-100">
+    <div class="row mt-1 mb-3 h-100">
       <div class="col">
+
+        <div class="float-right text-right">
+          <h2>{{ element.title }}</h2>
+          <p>{{ element }}</p>
+        </div>
 
         <div id="itemscarousel" class="carousel slide h-100 mx-auto" data-ride="carousel">
 
@@ -47,13 +52,6 @@
         </div>
       </div>
 
-    </div>
-
-    <div class="row">
-      <div class="col lead align-self-end">
-        <h2>{{ element.title }}</h2>
-        <p>{{ element }}</p>
-      </div>
     </div>
 
   </div>
