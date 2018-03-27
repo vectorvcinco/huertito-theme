@@ -4,7 +4,7 @@
     <div class="col-sm-8">
       <h2>{{ site.title | escape }}</h2>
       <p>{{ site.description | escape }}</p>
-      <p><small>{{ site.love }}</small></p>
+      <p>{{ site.love }}</p>
       {% for element in site.pages %}
         {% if element.permalink == "/respect/" %}
         <p><small>Made possible thanks to <a href="{% link opensource.md %}">these</a> projects</small></p>
