@@ -1,5 +1,5 @@
 ---
-image: http://lorempixel.com/output/nature-q-c-490-490-5.jpg
+image: 
 title: Other Feature 1
 ---
 
