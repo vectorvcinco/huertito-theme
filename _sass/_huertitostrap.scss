@@ -121,6 +121,7 @@ header.homeheader {
   }
 
   .content-item {
+    max-height: 24rem;
     shape-margin:30px;
   }
 }
@@ -175,10 +176,15 @@ header.homeheader {
   }
 }
 
+.carousel-control-prev-icon, .carousel-control-next-icon {
+  width: 40px;
+  height: 40px;
+}
+
 .carousel-control-next-icon {
-  background-image: navfwdarrow($guaya) !important;
+  background-image: navfwdarrow($planti) !important;
 }
 
 .carousel-control-prev-icon {
-  background-image: navbackarrow($guaya) !important;
+  background-image: navbackarrow($planti) !important;
 }

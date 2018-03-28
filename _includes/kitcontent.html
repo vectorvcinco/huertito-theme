@@ -9,9 +9,9 @@
     </div>
   </div>
   {% for element in site.kitcontents %}
-  <div class="homesection py-5 d-flex flex-column justify-content-between {% cycle 'bg-huertito-gray', 'bg-huertito-darks text-white' %} content {% cycle 'content-1','content-2','content-3' %}">
+  <div class="homesection pt-5 pb-3 d-flex flex-column justify-content-between {% cycle 'bg-huertito-gray', 'bg-huertito-darks text-white' %} content {% cycle 'content-1','content-2','content-3' %}">
 
-    <div class="row mt-1 mb-3 h-100">
+    <div class="row  mt-1">
       <div class="col">
 
         <div class="float-right text-right">
@@ -19,18 +19,18 @@
           <p>{{ element }}</p>
         </div>
 
-        <div id="itemscarousel" class="carousel slide h-100 mx-auto" data-ride="carousel">
+        <div id="itemscarousel" class="carousel  slide mx-auto" data-ride="carousel">
 
-          <ol class="carousel-indicators indicators-guaya">
+          <ol class="carousel-indicators indicators-planti">
             {% for item in element.items %}
             <li data-target="#itemscarousel" data-slide-to="{{ forloop.index0 }}" class="{% if forloop.first %}active{% endif %}"></li>
             {% endfor %}
           </ol>
 
-          <div class="carousel-inner h-100 mx-auto">
+          <div class="carousel-inner mx-auto">
             {% for item in element.items %}
-            <div class="{% if forloop.first %}active{% endif %} h-100 carousel-item">
-              <img class="content-item img-fluid h-75 d-block mx-auto my-auto" src="{{ item[1].image | relative_url }}" style="shape-outside:url({{ item[1].image | relative_url }})" alt="{{ item[0] }}">
+            <div class="{% if forloop.first %}active{% endif %} carousel-item">
+              <img class="content-item img-fluid d-block mx-auto my-auto" src="{{ item[1].image | relative_url }}" style="shape-outside:url({{ item[1].image | relative_url }})" alt="{{ item[0] }}">
 
               <div class="carousel-caption d-none d-md-block text-secondary">
                 <h5>{{ item[1].text }}</h5>
