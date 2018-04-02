@@ -18,7 +18,7 @@
           <h2>{{ element.title }}</h2>
           <p>{{ element }}</p>
         </div>
-
+        {% if element.items %}
         <div id="itemscarousel" class="carousel  slide mx-auto" data-ride="carousel">
 
           <ol class="carousel-indicators indicators-planti">
@@ -50,6 +50,11 @@
           </a>
 
         </div>
+        {% else %}
+        <div class="h-100 pb-5">
+          <img class="content-item h-75 img-fluid d-block mx-auto my-auto" src="{{ element.image | relative_url }}" style="shape-outside:url({{ item[1].image | relative_url }})" alt="{{ item[0] }}">
+        </div>
+        {% endif %}
       </div>
 
     </div>
