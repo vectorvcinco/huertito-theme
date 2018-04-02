@@ -4,12 +4,12 @@
   <div class="contentstitle">
     <div class="bg-huertito-gray pt-4">
       <div class="col">
-        <h1 class="text-center my-0">¿Qué incluye Huertito?</h1>
+        <h1 class="text-center my-0 pb-5">¿Qué incluye Huertito?</h1>
       </div>
     </div>
   </div>
   {% for element in site.kitcontents %}
-  <div class="homesection pt-5 pb-3 d-flex flex-column justify-content-between {% cycle 'bg-huertito-gray', 'bg-huertito-darks text-white' %} content {% cycle 'content-1','content-2','content-3' %}">
+  <div class="homesection pt-5 pb-3 d-flex flex-column justify-content-between {% cycle 'bg-huertito-gray', 'bg-huertito-darks text-white' %} content {% cycle '', 'content-lower' %}">
 
     <div class="row  mt-1">
       <div class="col">
@@ -18,7 +18,7 @@
           <h2>{{ element.title }}</h2>
           <p>{{ element }}</p>
         </div>
-
+        {% if element.items %}
         <div id="itemscarousel" class="carousel  slide mx-auto" data-ride="carousel">
 
           <ol class="carousel-indicators indicators-planti">
@@ -50,11 +50,17 @@
           </a>
 
         </div>
+        {% else %}
+        <div class="h-100 pb-5">
+          <img class="content-item h-75 img-fluid d-block mx-auto my-auto" src="{{ element.image | relative_url }}" style="shape-outside:url({{ item[1].image | relative_url }})" alt="{{ item[0] }}">
+        </div>
+        {% endif %}
       </div>
 
     </div>
 
   </div>
+  <div class="content-spacer"></div>
   {% endfor %}
 </section>
 
