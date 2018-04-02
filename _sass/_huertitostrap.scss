@@ -89,35 +89,19 @@ header.homeheader {
 .contentstitle {
   top:3.3*$spacer;
   position:sticky;
-  z-index:-1;
 }
 
 .content {
   height:80vh;
   width:100%;
+  top:7.7*$spacer;
+  position: sticky;
 
   h2, h3, h4, h5 {
      font-family: 'Amatic SC', cursive;
      letter-spacing: 0.2*$spacer;
      text-transform: uppercase;
      font-weight: bold;
-  }
-
-  &.content-1 {
-
-    top: 7*$spacer;
-    position: sticky;
-    z-index: -4;
-  }
-  &.content-2 {
-    top: 7*$spacer;
-    position: sticky;
-    z-index: -3;
-  }
-  &.content-3 {
-    top: 7*$spacer;
-    position: sticky;
-    z-index: -2;
   }
 
   .content-item {
