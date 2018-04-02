@@ -95,6 +95,10 @@ header.homeheader {
   height:30vh;
   position:sticky;
   z-index: -1;
+
+  @include respond-to(max-width, 500px){
+    display: none;
+  }
 }
 
 .content {
@@ -103,8 +107,16 @@ header.homeheader {
   top:8*$spacer;
   position: sticky;
 
+  @include respond-to(max-width, 500px){
+    top:12*$spacer;
+  }
+
   &.content-lower {
     top:8.2*$spacer;
+
+    @include respond-to(max-width, 500px){
+      top:12.2*$spacer;
+    }
   }
 
   h2, h3, h4, h5 {
