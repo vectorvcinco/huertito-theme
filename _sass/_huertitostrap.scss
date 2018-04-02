@@ -91,11 +91,21 @@ header.homeheader {
   position:sticky;
 }
 
+.content-spacer {
+  height:30vh;
+  position:sticky;
+  z-index: -1;
+}
+
 .content {
   height:80vh;
   width:100%;
-  top:7.7*$spacer;
+  top:8*$spacer;
   position: sticky;
+
+  &.content-lower {
+    top:8.2*$spacer;
+  }
 
   h2, h3, h4, h5 {
      font-family: 'Amatic SC', cursive;

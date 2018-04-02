@@ -4,12 +4,12 @@
   <div class="contentstitle">
     <div class="bg-huertito-gray pt-4">
       <div class="col">
-        <h1 class="text-center my-0">¿Qué incluye Huertito?</h1>
+        <h1 class="text-center my-0 pb-5">¿Qué incluye Huertito?</h1>
       </div>
     </div>
   </div>
   {% for element in site.kitcontents %}
-  <div class="homesection pt-5 pb-3 d-flex flex-column justify-content-between {% cycle 'bg-huertito-gray', 'bg-huertito-darks text-white' %} content">
+  <div class="homesection pt-5 pb-3 d-flex flex-column justify-content-between {% cycle 'bg-huertito-gray', 'bg-huertito-darks text-white' %} content {% cycle '', 'content-lower' %}">
 
     <div class="row  mt-1">
       <div class="col">
@@ -60,6 +60,7 @@
     </div>
 
   </div>
+  <div class="content-spacer"></div>
   {% endfor %}
 </section>
 
