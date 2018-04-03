@@ -45,10 +45,7 @@ main, footer {
   }
 
   @include respond-to(max-width, 500px){
-    h3 {
-      margin-top: $spacer;
-      text-align: center;
-    }
+    padding: $spacer $spacer;
   }
 }
 
@@ -108,14 +105,14 @@ header.homeheader {
   position: sticky;
 
   @include respond-to(max-width, 500px){
-    top:12*$spacer;
+    top:9*$spacer;
   }
 
   &.content-lower {
     top:8.2*$spacer;
 
     @include respond-to(max-width, 500px){
-      top:12.2*$spacer;
+      top:9.1*$spacer;
     }
   }
 
