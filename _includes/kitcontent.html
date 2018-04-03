@@ -2,21 +2,23 @@
 
 <section>
   <div class="contentstitle">
-    <div class="bg-huertito-gray pt-4">
+    <div class="bg-huertito-gray pt-3 pt-sm-4">
       <div class="col">
-        <h1 class="text-center my-0 pb-5">¿Qué incluye Huertito?</h1>
+        <h1 class="text-center my-0 pb-5 d-none d-sm-block">¿Qué incluye Huertito?</h1>
+        <h2 class="text-center my-0 pb-2 d-sm-none pb-sm-4">¿Qué incluye Huertito?</h2>
       </div>
     </div>
   </div>
   {% for element in site.kitcontents %}
-  <div class="homesection pt-5 pb-3 d-flex flex-column justify-content-between {% cycle 'bg-huertito-gray', 'bg-huertito-darks text-white' %} content {% cycle '', 'content-lower' %}">
+  <div class="homesection pt-2 pt-sm-5 pb-3 d-flex flex-column justify-content-between {% cycle 'bg-huertito-gray', 'bg-huertito-darks text-white' %} content {% cycle '', 'content-lower' %}">
 
     <div class="row  mt-1">
       <div class="col">
 
-        <div class="float-right text-right">
-          <h2>{{ element.title }}</h2>
-          <p>{{ element }}</p>
+        <div class="float-right text-left text-sm-right">
+          <h2 class="d-none d-sm-block">{{ element.title }}</h2>
+          <h4 class="d-sm-none">{{ element.title }}</h4>
+          <div>{{ element }}</div>
         </div>
         {% if element.items %}
         <div id="itemscarousel" class="carousel  slide mx-auto" data-ride="carousel">
@@ -52,7 +54,8 @@
         </div>
         {% else %}
         <div class="h-100 pb-5">
-          <img class="content-item h-75 img-fluid d-block mx-auto my-auto" src="{{ element.image | relative_url }}" style="shape-outside:url({{ item[1].image | relative_url }})" alt="{{ item[0] }}">
+          <img class="content-item d-none d-sm-block h-75 img-fluid mx-auto my-auto" src="{{ element.image | relative_url }}" style="shape-outside:url({{ item[1].image | relative_url }})" alt="{{ item[0] }}">
+          <img class="content-item d-block d-sm-none img-fluid mx-auto my-auto" src="{{ element.image | relative_url }}" style="shape-outside:url({{ item[1].image | relative_url }})" alt="{{ item[0] }}">
         </div>
         {% endif %}
       </div>
