@@ -9,6 +9,10 @@
 
 $spacer: 1rem !default;
 
+$font-family-sans-serif:      'Ubuntu', sans-serif;
+$font-family-monospace:       "SFMono-Regular", Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace !default;
+$font-family-base:            $font-family-sans-serif !default;
+
 // Colores Huertito
 
 $bluesaur: #17A2B8;
@@ -58,7 +62,8 @@ $colors: (
 $theme-colors: (
   primary: $planti,
   secondary: $gray-600,
-  blue: $blue,
+  "blue": $blue,
+  "silver": $silver,
   success: $green,
   warning: $jellow,
   danger: $red,

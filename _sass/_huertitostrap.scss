@@ -6,12 +6,8 @@
   }
 }
 
-body {
-  font-family: 'Ubuntu', sans-serif;
-}
-
 h2, h3, h4, h5 {
-font-family: 'Comfortaa', cursive;
+font-family: 'Comfortaa', cursive !important;
 }
 
 @mixin logo-svg($animado: true) {
@@ -48,10 +44,6 @@ main, footer {
 
 a.logo {
   @include logo-svg(false);
-}
-
-.page {
-  margin-top: 4em;
 }
 
 footer {
@@ -114,7 +106,7 @@ header.homeheader {
   }
 
   h2, h3, h4, h5 {
-     font-family: 'Amatic SC', cursive;
+     font-family: 'Amatic SC', cursive !important;
      letter-spacing: 0.2*$spacer;
      text-transform: uppercase;
      font-weight: bold;

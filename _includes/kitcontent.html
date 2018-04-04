@@ -15,7 +15,7 @@
     <div class="row mt-1">
       <div class="col h-100">
 
-        <div class="float-right text-left text-sm-right">
+        <div class="{% if element.items %}float-right{% endif %} text-left text-sm-right">
           <h2 class="d-none d-sm-block">{{ element.title }}</h2>
           <h4 class="d-sm-none">{{ element.title }}</h4>
           <div>{{ element }}</div>
@@ -33,11 +33,6 @@
             {% for item in element.items %}
             <div class="{% if forloop.first %}active{% endif %} carousel-item">
               <img class="content-item img-fluid d-block mx-auto my-auto" src="{{ item[1].image | relative_url }}" style="shape-outside:url({{ item[1].image | relative_url }})" alt="{{ item[0] }}">
-
-              <div class="carousel-caption d-none d-md-block text-secondary">
-                <h5>{{ item[1].text }}</h5>
-              </div>
-
             </div>
             {% endfor %}
           </div>
