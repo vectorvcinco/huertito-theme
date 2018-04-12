@@ -180,3 +180,18 @@ header.homeheader {
 .carousel-control-prev-icon {
   background-image: navbackarrow($planti) !important;
 }
+
+.mediakit {
+  @extend .card-columns;
+  p {
+    @extend .card;
+
+    text-align: center;
+    padding: 0 0 $spacer;
+
+    img {
+      @extend .card-img-top;
+      margin-bottom: $spacer;
+    }
+  }
+}
