@@ -7,6 +7,12 @@
 // font-family: 'Didact Gothic', sans-serif;
 // font-family: 'Comfortaa', cursive;
 
+$spacer: 1rem !default;
+
+$font-family-sans-serif:      'Ubuntu', sans-serif;
+$font-family-monospace:       "SFMono-Regular", Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace !default;
+$font-family-base:            $font-family-sans-serif !default;
+
 // Colores Huertito
 
 $bluesaur: #17A2B8;
@@ -24,6 +30,18 @@ $gris2: #455A64;
 $tomato: #CB2027;
 $gray: #eee;
 
+$white:    #fff;
+$gray-100: #f8f9fa;
+$gray-200: #e9ecef;
+$gray-300: #dee2e6;
+$gray-400: #ced4da;
+$gray-500: #adb5bd;
+$gray-600: #868e96;
+$gray-700: #495057;
+$gray-800: #343a40;
+$gray-900: #212529;
+$black:    #000;
+
 $colors: (
   bluesaur: $bluesaur,
   planti: $planti,
@@ -38,19 +56,15 @@ $colors: (
   "purple": $purple,
   gris2: $gris2,
   "tomato": $tomato,
-  "white": $white,
   "gray": $gray,
-  gray-dark: $gray-800,
 );
 
 $theme-colors: (
-  primary: $blue,
+  primary: $planti,
   secondary: $gray-600,
+  "blue": $blue,
+  "silver": $silver,
   success: $green,
-  info: $cyan,
-  warning: $yellow,
+  warning: $jellow,
   danger: $red,
-  light: $gray-100,
-  dark: $gray-800,
-  white: $white
-) !default;
+);

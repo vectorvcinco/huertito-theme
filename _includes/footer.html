@@ -1,15 +1,10 @@
-<footer class="footer container-fluid py-4 text-white bg-huertito-darks" id="footer" style="z-index:1;position:relative;">
+<footer class="footer container-fluid pt-4 pb-2 text-white bg-huertito-darks" id="footer" style="z-index:1;position:relative;">
 
   <div class="row">
     <div class="col-sm-8">
       <h2>{{ site.title | escape }}</h2>
       <p>{{ site.description | escape }}</p>
       <p>{{ site.love }}</p>
-      {% for element in site.pages %}
-        {% if element.permalink == "/respect/" %}
-        <p><small>Made possible thanks to <a href="{% link opensource.md %}">these</a> projects</small></p>
-        {% endif %}
-      {% endfor %}
     </div>
 
     <div class="col">
@@ -28,6 +23,22 @@
         <li>
           {% include icon-twitter.html username=site.twitter_username %}
         </li>
+        {% endif %}
+      </ul>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col">
+      <ul class="list-inline small m-0 mb-2">
+        {% if site.footer_sections.faq %}
+        <li class="list-inline-item ml-3"><a href="/faq">FAQ</a></li>
+        {% endif %}
+        {% if site.footer_sections.mediakit %}
+        <li class="list-inline-item ml-3"><a href="/mediakit">Press & Media kit</a></li>
+        {% endif %}
+        {% if site.footer_sections.respect %}
+        <li class="list-inline-item ml-3"><a href="/respect">ty gg gj</a></li>
         {% endif %}
       </ul>
     </div>
